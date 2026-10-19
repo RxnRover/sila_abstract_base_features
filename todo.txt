@@ -1,0 +1,3 @@
+2026-10-19 Add actual description of the repository to README
+2026-10-19 Add SiLA and Unite Labs CDK links and other related resources
+2026-10-19 Set up docs/ directory with Sphinx
