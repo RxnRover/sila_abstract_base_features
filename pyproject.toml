@@ -9,7 +9,7 @@ authors = [
     { name = "zachcran", email = "zachcran@iastate.edu" },
 ]
 maintainers = [{ name = "zachcran", email = "zachcran@iastate.edu" }]
-dependencies = ["matplotlib", "numpy"]
+dependencies = ["unitelabs-cdk"]
 dynamic = ["version"]
 requires-python = ">=3.10, <4"
 license = "MIT"
@@ -80,14 +80,14 @@ line_length = 80
 
 [tool.isort]
 profile = "black"
-known_first_party = "sila_abstract_base_features"
+known_first_party = "rxnrover.sila.abf"
 multi_line_output = 3
 line_length = 80
 
 [tool.pytest.ini_options]
 # Enable log display during test runs with --strict-markers
 # See: https://docs.pytest.org/en/latest/how-to/logging.html#live-logs
-addopts = "--cov sila_abstract_base_features --cov-report term-missing --verbose --strict-markers"
+addopts = "--cov rxnrover.sila.abf --cov-report term-missing --verbose --strict-markers"
 norecursedirs = "dist build .tox"
 testpaths = ["tests"]
 log_cli = true
@@ -99,7 +99,7 @@ markers = [
 
 [tool.coverage.run]
 branch = true
-source = ["sila_abstract_base_features"]
+source = ["src"]
 # omit = bad_file.py
 
 [tool.coverage.paths]
@@ -130,5 +130,5 @@ disallow_untyped_defs = true
 exclude = ['^setup.py$', '^build', '^venv', '^docs', '^tests']
 
 [[tool.mypy.overrides]]
-module = "sila_abstract_base_features.*"
+module = "rxnrover.sila.abf.*"
 disallow_incomplete_defs = true
