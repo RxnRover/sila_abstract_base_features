@@ -14,7 +14,7 @@ class InvalidFlowRate(Exception):
 # TODO: How to handle units on different pumps?
 
 
-class MeteringPumpControllerBase(ABC, sila.Feature):
+class MeteringPumpControllerBase(sila.Feature, ABC):
     """Metering pumps deliver a continous rate of flow."""
 
     def __init__(self, **kwarg: Any) -> None:
