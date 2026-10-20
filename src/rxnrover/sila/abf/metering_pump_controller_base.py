@@ -18,11 +18,13 @@ class MeteringPumpControllerBase(sila.Feature, ABC):
     """Metering pumps deliver a continous rate of flow."""
 
     def __init__(self, **kwarg: Any) -> None:
+        """Instantiates the feature.
+
+        In concrete features, be sure to set the feature metadata provided in
+        `https://docs.unitelabs.io/connector-development/reference/feature-metadata/#version`__.
+        """
         super().__init__(
-            originator="rxnrover.sila",
-            category="",
-            version="0.1.0",
-            maturity_level="Draft",
+            category="pumps",  # TODO: check for existing categories
             **kwarg,
         )
 
